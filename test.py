@@ -1,5 +1,9 @@
 import random
 
+
+def hihi():
+    print("hihi")
+
 def hello():
     print("Hello world, i'm test file")
 
