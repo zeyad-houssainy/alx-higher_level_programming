@@ -1,2 +1,3 @@
-a = 1, 2, 3, "Zeyad", "Ahmed"
-print (a)
+a = "ABC"
+print(len(a))
+print(a[0])
