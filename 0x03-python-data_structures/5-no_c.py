@@ -5,9 +5,9 @@ def no_c(my_string):
     for i in my_string:
         print(i)
         if i == 'c':
-            my_string.remove('c')
-        if i == 'C':
-            my_string.remove('C')
+            my_string.remove(i)
+        elif i == 'C':
+            my_string.remove(i)
     my_string = "".join(my_string)
     return my_string
 
