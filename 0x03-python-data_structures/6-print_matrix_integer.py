@@ -4,9 +4,9 @@ def print_matrix_integer(matrix=[[]]):
         count = 0
         for j in i:
             if count < (len(i) - 1):
-                print("{:d}".format(j), end=".")
+                print("{:d}".format(j), end=" ")
             else:
-                print("{:d}".format(j), end="#")
+                print("{:d}".format(j), end="")
             count = count + 1
         if len(i) > 0:
             print('')
