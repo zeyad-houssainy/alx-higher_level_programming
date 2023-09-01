@@ -9,10 +9,14 @@ class Square:
         """initiate attributes"""
         self.size = size
 
+
+    @property
     def size(self):
-        """Getter for private __size"""
+        """Get/set the current size of the square."""
         return (self.__size)
 
+
+    @size.setter
     def size(self, value):
         """setter for private __size"""
         if not isinstance(value, int):
@@ -22,8 +26,8 @@ class Square:
         self.__size = value
 
     def area(self):
-        """return area of the square.size"""
-        return (self.size * self.size)
+        """Return the current area of the square."""
+        return (self.__size * self.__size)
 
 
 ###############################################

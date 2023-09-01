@@ -1,25 +1,44 @@
-class human:
-    def __init__(self, name, age, gender, height):
-        self.name = name
-        self.age = age
-        self.gender = gender
-        self.height = height
-    def __str__(self):
-        return f"\n\ni'm testing the STR function and it returned...\nname: {self.name}\nAge: {self.age}"
-    def greet(self):
-        print(f"Hello, i'm {self.name} and i'm {self.age}. Welcome to my channel..")
+class Square:
+    """Represent a square."""
 
+    def __init__(self, size=0):
+        self.size = size
 
-h1 = human("Zeyad", 21, "Male", 182)
-h1.greet()
-print(h1)
-h2 = human("Nour", 28, "Female", 162)
-print(h2)
-h2.greet()
+    @property
+    def size(self):
+        return (self.__size)
 
-h2.blabla = "OK i'm a new attribute that is custome"
-print(h2.blabla)
+    @size.setter
+    def size(self, value):
+        if not isinstance(value, int):
+            raise TypeError("size must be an integer")
+        elif value < 0:
+            raise ValueError("size must be >= 0")
+        self.__size = value
 
+    def area(self):
+        return (self.__size * self.__size)
 
-print(h1.__dict__)
-print(h2.__dict__)
+################################################################
+################################################################
+################################################################
+################################################################
+
+class Square:
+    """square class is generated"""
+
+    def __init__(self, size=0):
+        self.size = size
+
+    def size(self):
+        return (self.__size)
+
+    def size(self, value):
+        if not isinstance(value, int):
+            raise TypeError("size must be an integer")
+        elif value < 0:
+            raise ValueError("size must be >= 0")
+        self.__size = value
+
+    def area(self):
+        return (self.__size * self.__size)
