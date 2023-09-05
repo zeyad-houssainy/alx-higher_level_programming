@@ -44,6 +44,9 @@ class Dog:
 
 # print(Dog.sound)
 dog1 = Dog("Bob","German shephard", "White")
+print(dog1.get_name())
+dog1.set_name("Tuna")
+print(dog1.get_name())
 
 
 
