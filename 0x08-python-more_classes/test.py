@@ -1,4 +1,3 @@
-a = str(11111)
-print(a)
-# print(str(a))
-print(repr(a))
+a = "abc"
+b = a.upper()
+print(repr(b))
