@@ -1,5 +1,3 @@
-a = 1
-b = 1
+a = 89
+b = a
 print(a is b)
-print(id(a))
-print(id(b))
