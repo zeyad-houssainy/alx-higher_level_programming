@@ -1,23 +1,41 @@
-class Human:
+class Animal:
+    count = 0
+    
+    def __init__(self, blooded="Unknown", birthtype="Unknown", cover="Unknown"):
+        Animal.count += 1
+        self.__blooded = blooded
+        self.__birthtype = birthtype
+        self.__cover = cover
 
-    def __init__(self, name="None", age=0, gender="male", height=150):
-        self.name = name
-        self.age = age
-        self.gender = gender
-        self.height = height
+    @property
+    def blooded(self):
+        return self.__blooded
+    
+    @blooded.setter
+    def blooded(self, blooded):
+        self.__blooded = blooded
 
+    @property
+    def birthtype(self):
+        return self.__birthtype
 
-    def human_data(self):
-        return {"Name": self.name,
-                "Age": self.age, 
-                "Gender": self.gender,
-                "Height": self.height
-                }
+    @birthtype.setter
+    def birthtype(self, birthtype):
+        self.__birthtype = birthtype
+
+    @property
+    def cover(self):
+        return self.__cover
+    
+    @cover.setter
+    def cover(self, cover):
+        self.__cover = cover
     
     def __str__(self):
-        return f"####\nHello, i'm {self.name}, i'm {self.age}.\nMy height is {self.age} and i'm a {self.gender}\n####"
-    
+        return f"I'm {type(self).__name__} Number #{Animal.count} my cover is {self.cover} "
 
-p1 = Human("zeyad", 25, "Male", 190)
-print(p1)
-print(p1.human_data())
+a1 = Animal("yes", "Egg", "Fur")
+print(a1)
+a2 = Animal("NO", "Mammal", "Feather")
+print(a2)
+
