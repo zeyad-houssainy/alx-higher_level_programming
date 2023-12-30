@@ -1,11 +1,9 @@
 #!/usr/bin/node
-if (process.argv[2] && !isNaN(process.argv[2])) {
-  for (let i = 0; i < process.argv[2]; i++) {
-    for (let j = 0; j < process.argv[2]; j++) {
-      console.log('X');
-    }
-    console.log('\n')
+const squareSize = Number(process.argv[2]);
+if (Number(process.argv[2])) {
+  for (let i = 0; i < squareSize; i++) {
+    console.log('X'.repeat(squareSize));
   }
-  } else {
-    console.log('Missing size');
-  }
+} else {
+  console.log('Missing size');
+}
