@@ -1,3 +1,7 @@
 #!/usr/bin/node
-const array = process.argv.slice(2).sort.map(Number);
-console.log(array.length === 0 || array.length === 1 ? 0 : array[array.length - 2]);
+const array = [...new Set(process.argv.slice(2).sort().map(Number))];
+if (array.length === 0 || array.length === 1) {
+  console.log(0);
+} else {
+  console.log(array[array.length - 2]);
+}
