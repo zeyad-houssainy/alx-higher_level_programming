@@ -8,9 +8,10 @@ def is_same_class(obj, a_class):
     Args:
         obj: the object to be checked
         a_class (type): the original parent class that we want to compare with
-    returns:
+    returns: 
         return True if the Obect is instance of a_class
     """
-    if obj.__name__ == a_class:
+    if type(obj) == a_class:
         return True
     return False
+
