@@ -1,35 +1,20 @@
 #!/usr/bin/python3
-"""8-rectangle.py
+"""10-square.py
 """
 
 
-from 7-base_geometry import BaseGeometry
-
-test = BaseGeometry
+Rectangle = __import__('9-rectangle').Rectangle
 
 
-class Rectangle(BaseGeometry):
-    """ Rectangle inherits from BaseGeomtry """
+class Square(Rectangle):
+    """ inherits from Rectangle class """
 
-    def __init__(self, width, height):
-        """ Constructor"""
-        self.integer_validator('width', width)
-        self.integer_validator('height', height)
-        self.__width = width
-        self.__height = height
+    def __init__(self, size):
+        """ Constructor """
+        if self.integer_validator('size', size):
+            self.__size = size
+        super().__init__(size, size)
 
-
-r = Rectangle(3, 5)
-
-print(r)
-print(dir(r))
-
-try:
-    print("Rectangle: {} - {}".format(r.width, r.height))
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
-
-try:
-    r2 = Rectangle(4, True)
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
+    def area(self):
+        """ Returns area of Square object"""
+        return super().area()
