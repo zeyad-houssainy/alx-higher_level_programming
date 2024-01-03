@@ -1,11 +1,35 @@
-def divide_numbers(a, b):
-    if b == 0:
-        raise ValueError("Division by zero is not allowed")
-    return a / b
+#!/usr/bin/python3
+"""8-rectangle.py
+"""
 
+
+from 7-base_geometry import BaseGeometry
+
+test = BaseGeometry
+
+
+class Rectangle(BaseGeometry):
+    """ Rectangle inherits from BaseGeomtry """
+
+    def __init__(self, width, height):
+        """ Constructor"""
+        self.integer_validator('width', width)
+        self.integer_validator('height', height)
+        self.__width = width
+        self.__height = height
+
+
+r = Rectangle(3, 5)
+
+print(r)
+print(dir(r))
 
 try:
-    result = divide_numbers(10, 0)
-    print(result)
-except ValueError as e:
-    print(f"Error: {e}")
+    print("Rectangle: {} - {}".format(r.width, r.height))
+except Exception as e:
+    print("[{}] {}".format(e.__class__.__name__, e))
+
+try:
+    r2 = Rectangle(4, True)
+except Exception as e:
+    print("[{}] {}".format(e.__class__.__name__, e))
