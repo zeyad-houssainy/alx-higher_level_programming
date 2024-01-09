@@ -87,8 +87,8 @@ except Exception as e:
 #     print("There were SystemErrors")
 
 
-exc_error = []
-number_of_errors = 0
+# exc_error = []
+# number_of_errors = 0
 # def f():
 #      try:
 #         number_of_errors = number_of_errors + 1
@@ -96,7 +96,7 @@ number_of_errors = 0
 #      except :
 #         exc_error.append()
 
-def f():
-    raise TypeError(f"This's Error Number: {number_of_errors}")
+# def f():
+#     raise TypeError(f"This's Error Number: {number_of_errors}")
 f()
-f()
+# f()
