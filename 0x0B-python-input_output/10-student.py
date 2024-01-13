@@ -28,11 +28,11 @@ class Student:
         """
         if attrs is None:
             return self.__dict__
-        else:
-            new_dict = {}
+
+        new_dict = {}
+        for item in attrs:
             try:
-                for items in attrs:
-                    new_dict[items] = self.__dict__[items]
+                new_dict[item] = self.__dict__[item]
             except Exception:
                 pass
-            return new_dict
+        return new_dict
