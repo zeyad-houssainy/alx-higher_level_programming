@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Module for the base class"""
 
+
 class Base:
     """A representation of the base of our OOP hierarchy"""
 
@@ -16,6 +17,3 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
-
-
-
