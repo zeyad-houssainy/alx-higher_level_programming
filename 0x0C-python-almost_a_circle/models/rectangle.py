@@ -49,7 +49,7 @@ class Rectangle(Base):
         """Getter for the Y parameter"""
         return self.__y
 
-    @width.setter
+    @y.setter
     def y(self, value):
         """Setter for Y"""
         self.__y = value
