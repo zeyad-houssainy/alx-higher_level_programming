@@ -4,10 +4,10 @@ from models.base import Base
 
 
 class Rectangle(Base):
-    '''A Rectangle class.'''
+    """Rectangle Class"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        '''Constructor.'''
+        """Constructor for rectangle"""
         super().__init__(id)
         self.width = width
         self.height = height
@@ -16,41 +16,45 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        '''Width of this rectangle.'''
+        """Getter for the width parameter"""
         return self.__width
 
     @width.setter
     def width(self, value):
+        """Setter for width"""
         self.validate_integer("width", value, False)
         self.__width = value
 
     @property
     def height(self):
-        '''Height of this rectangle.'''
+        """Getter for the width parameter"""
         return self.__height
 
     @height.setter
     def height(self, value):
+        """Setter for height"""
         self.validate_integer("height", value, False)
         self.__height = value
 
     @property
     def x(self):
-        '''x of this rectangle.'''
+        """Getter for the X parameter"""
         return self.__x
 
     @x.setter
     def x(self, value):
+        """Setter for X"""
         self.validate_integer("x", value)
         self.__x = value
 
     @property
     def y(self):
-        '''y of this rectangle.'''
+        """Getter for the Y parameter"""
         return self.__y
 
     @y.setter
     def y(self, value):
+        """Setter for Y"""
         self.validate_integer("y", value)
         self.__y = value
 
