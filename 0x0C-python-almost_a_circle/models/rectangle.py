@@ -4,7 +4,7 @@ from base import Base
 
 
 class Rectangle(Base):
-    """Rectangle Class"""
+    '''A Rectangle class.'''
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """Constructor for rectangle"""
@@ -16,7 +16,7 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """Getter for the width parameter"""
+        '''Width of this rectangle.'''
         return self.__width
 
     @width.setter
@@ -26,7 +26,7 @@ class Rectangle(Base):
 
     @property
     def height(self):
-        """Getter for the width parameter"""
+        '''Height of this rectangle.'''
         return self.__height
 
     @height.setter
@@ -36,7 +36,7 @@ class Rectangle(Base):
 
     @property
     def x(self):
-        """Getter for the X parameter"""
+        '''x of this rectangle.'''
         return self.__x
 
     @x.setter
@@ -46,7 +46,7 @@ class Rectangle(Base):
 
     @property
     def y(self):
-        """Getter for the Y parameter"""
+        '''y of this rectangle.'''
         return self.__y
 
     @y.setter
