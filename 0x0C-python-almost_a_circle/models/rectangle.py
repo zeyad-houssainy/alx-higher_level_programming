@@ -22,7 +22,6 @@ class Rectangle(Base):
     @width.setter
     def width(self, value):
         """Setter for width"""
-        self.validate_int("width", value)
         self.__width = value
 
     @property
@@ -33,7 +32,6 @@ class Rectangle(Base):
     @height.setter
     def height(self, value):
         """Setter for height"""
-        self.validate_int("height", value)
         self.__height = value
 
     @property
@@ -44,7 +42,6 @@ class Rectangle(Base):
     @x.setter
     def x(self, value):
         """Setter for X"""
-        self.validate_int("x", value)
         self.__x = value
 
     @property
@@ -55,14 +52,4 @@ class Rectangle(Base):
     @width.setter
     def y(self, value):
         """Setter for Y"""
-        self.validate_int("y", value)
         self.__y = value
-
-    def validate_int(self, name, value, eq=True):
-        """Validation for integer positive values"""
-        if type(value) != int:
-            raise TypeError(f"{name} must be an integer")
-        if value <= 0:
-            raise ValueError(f"{name} must be a positive number 'number > 0'")
-        elif not eq and value <= 0:
-            raise ValueError(f"{name} must be > 0")
