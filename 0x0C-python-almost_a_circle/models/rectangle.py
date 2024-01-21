@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Module for the Rectangle class"""
+'''Module for Rectangle class.'''
 from models.base import Base
 
 
@@ -53,3 +53,7 @@ class Rectangle(Base):
     def y(self, value):
         """Setter for Y"""
         self.__y = value
+
+
+rec_1 = Rectangle(4,5)
+print(rec_1)

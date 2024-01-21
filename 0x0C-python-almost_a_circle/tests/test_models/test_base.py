@@ -23,7 +23,7 @@ class TestBase(unittest.TestCase):
 
     def tearDown(self):
         """Tear down after each method"""
-        print(f"Test status: Done ...")
+        print(f"{self.__class__.__name__} {self._testMethodName}: done...")
         pass
 
 # Test ----------- #1 -----------
@@ -34,7 +34,7 @@ class TestBase(unittest.TestCase):
         self.assertEqual(base_with_id.id, 5)
         """ID with no value"""
 
-    def test_id_with_values(self, base_1=Base(), base_2=Base(), base_3=Base(), base_4=Base()):
+    def test_id_without_values(self, base_1=Base(), base_2=Base(), base_3=Base(), base_4=Base()):
         """Test ID increment"""
         self.assertEqual(base_1.id, 1)
         self.assertEqual(base_2.id, 2)
@@ -65,7 +65,7 @@ class TestBase(unittest.TestCase):
         i = 95
         base_1 = Base(id=i)
         self.assertEqual(base_1.id, i)
-
+    
 # Test ----------- # -----------
 
 if __name__ == '__main__':
