@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''Module for Rectangle class.'''
-from models.base import Base
+from base import Base
 
 
 class Rectangle(Base):
@@ -13,6 +13,10 @@ class Rectangle(Base):
         self.__height = height
         self.__x = x
         self.__y = y
+        self.validate_integer("width", self.__width)
+        self.validate_integer("height", self.__height)
+        self.validate_integer("x", self.__x)
+        self.validate_integer("y", self.__y)
 
     @property
     def width(self):
@@ -22,16 +26,18 @@ class Rectangle(Base):
     @width.setter
     def width(self, value):
         """Setter for width"""
+        self.validate_integer("width", value)
         self.__width = value
 
     @property
     def height(self):
-        """Getter for the width parameter"""
+        """Getter for the height parameter"""
         return self.__height
 
     @height.setter
     def height(self, value):
         """Setter for height"""
+        self.validate_integer("height", value)
         self.__height = value
 
     @property
@@ -42,6 +48,7 @@ class Rectangle(Base):
     @x.setter
     def x(self, value):
         """Setter for X"""
+        self.validate_integer("x", value)
         self.__x = value
 
     @property
@@ -52,8 +59,13 @@ class Rectangle(Base):
     @y.setter
     def y(self, value):
         """Setter for Y"""
+        self.validate_integer("y", value)
         self.__y = value
 
-
-rec_1 = Rectangle(4,5)
-print(rec_1)
+    def validate_integer(self, name, value):
+        if not isinstance(value, int):
+            raise TypeError(f"{name} must be an integer")
+        if name in ["x", "y"] and value < 0:
+            raise ValueError(f"{name} must be >= 0")
+        elif name in ["width", "height"] and value <= 0:
+            raise ValueError(f"{name} must be > 0")
