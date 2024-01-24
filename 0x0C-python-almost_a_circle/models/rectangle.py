@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''Module for Rectangle class.'''
-from base import Base
+from models.base import Base
 
 
 class Rectangle(Base):
@@ -82,4 +82,4 @@ class Rectangle(Base):
 
     def __str__(self):
         """returns a presentation for the class"""
-        return f"[{type(self).__name__}] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
+        return f"[{self.__class__.__name__}] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
