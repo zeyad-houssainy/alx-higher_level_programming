@@ -79,3 +79,7 @@ class Rectangle(Base):
         """Display a representation for the Recatngle"""
         for i in range(self.__height):
             print("#" * self.__width)
+
+    def __str__(self):
+        """returns a presentation for the class"""
+        return f"[{self.__class__.__name__}] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
