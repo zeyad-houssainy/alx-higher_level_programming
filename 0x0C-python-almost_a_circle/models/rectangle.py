@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''Module for Rectangle class.'''
-from models.base import Base
+from base import Base
 
 
 class Rectangle(Base):
@@ -74,3 +74,8 @@ class Rectangle(Base):
     def area(self):
         """returns area for the rectangle"""
         return self.__height * self.__width
+
+    def display(self):
+        """Display a representation for the Recatngle"""
+        for i in range(self.__height):
+            print("#" * self.__width)
