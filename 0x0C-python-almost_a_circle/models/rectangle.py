@@ -82,6 +82,7 @@ class Rectangle(Base):
 
     def __str__(self):
         """returns a presentation for the class"""
-        return '[{}] ({}) {}/{} - {}/{}'.\
-            format(type(self).__name__, self.id, self.x, self.y, self.width,
-                   self.height)
+        return (
+            f"[{self.__class__.__name__}] ({self.id}) "
+            f"{self.__x}/{self.__y} - {self.__width}/{self.__height}"
+        )
