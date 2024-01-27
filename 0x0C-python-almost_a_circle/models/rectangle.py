@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''Module for Rectangle class.'''
-from base import Base
+from models.base import Base
 
 
 class Rectangle(Base):
@@ -76,10 +76,10 @@ class Rectangle(Base):
         return self.__height * self.__width
 
     def display(self):
-        '''Prints string representation of this rectangle.'''
-        s = '\n' * self.y + \
-            (' ' * self.x + '#' * self.width + '\n') * self.height
-        print(s, end='')
+        """Display a representation for the Recatngle"""
+        print("\n" * self.__y, end="")
+        for i in range(self.__height):
+            print((" " * self.__x) + ("#" * self.__width))
 
     def __str__(self):
         """returns a presentation for the class"""
