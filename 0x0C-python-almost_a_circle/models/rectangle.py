@@ -77,7 +77,7 @@ class Rectangle(Base):
 
     def display(self):
         """Display a representation for the Recatngle"""
-        print("\n" * self.__y)
+        print("\n" * self.__y, end="")
         for i in range(self.__height):
             print((" " * self.__x) + ("#" * self.__width))
 
@@ -86,5 +86,5 @@ class Rectangle(Base):
         return (
             f"[{self.__class__.__name__}] ({self.id}) "
             f"{self.__x}/{self.__y} - {self.__width}/{self.__height}")
-r1 = Rectangle(2, 3, 5, 0)
+r1 = Rectangle(2, 3, 2, 2)
 r1.display()
