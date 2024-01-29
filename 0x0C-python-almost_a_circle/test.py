@@ -1,5 +1,6 @@
 from models.base import Base
 def test_function(var1, *argv):
+    print(argv)
     print(f"Variable Number 1: {var1}")
     count = 2
     for items in argv:
@@ -32,3 +33,11 @@ def greet_me(**kwargs):
 greet_me(name = "Raneem", age = 26)
 
 
+def print_args_and_kwargs(*args, **kwargs):
+    for arg in args:
+        print(arg)
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+
+print("###########")
+print_args_and_kwargs(1, 2, 3, name="John", age=25)

@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''Module for Rectangle class.'''
-from models.base import Base
+from base import Base
 
 
 class Rectangle(Base):
@@ -86,3 +86,10 @@ class Rectangle(Base):
         return (
             f"[{self.__class__.__name__}] ({self.id}) "
             f"{self.__x}/{self.__y} - {self.__width}/{self.__height}")
+
+    def update(self, *args):
+        """update the values for the object"""
+        if args is not None and len(args) is not 0:
+            list_atrr = ['id', 'width', 'height', 'x', 'y']
+            for i in range(len(args)):
+                setattr(self, list_atrr[i], args[i])
