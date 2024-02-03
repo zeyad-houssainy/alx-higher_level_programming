@@ -1,4 +1,6 @@
 import subprocess
+subprocess.run(['pip', 'install', 'coverage'])
+  
 
 # Run tests with coverage
 subprocess.run(['coverage', 'run', '-m', 'unittest',
