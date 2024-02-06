@@ -30,7 +30,7 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         """update values for the square parameters"""
-        if args is not None and len(args) != 0:
+        if args:
             list_atrr = ["id", "size", "x", "y"]
             for i in range(len(args)):
                 if list_atrr[i] == "size":
