@@ -109,4 +109,3 @@ class Rectangle(Base):
             "height": dict_1["height"],
         }
         return dict_2
-
