@@ -1,5 +1,5 @@
 import subprocess
-subprocess.run(['pip', 'install', 'coverage'])
+subprocess.run(["python.exe", "-m pip install", "--upgrade", "pip"])
   
 
 # Run tests with coverage
@@ -11,3 +11,6 @@ subprocess.run(['python', '-m', 'coverage', 'report'])
 
 # Generate HTML coverage report
 subprocess.run(['python', '-m', 'coverage', 'html'])
+
+#Unittest
+# subprocess.run(['python3', '-m', 'unittest', 'discover', 'tests'])
