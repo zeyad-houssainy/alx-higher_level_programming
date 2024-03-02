@@ -5,12 +5,11 @@
 //     }
 // }
 
-
 const myObject = {
-    name: 'Zeyad',
-    greet() {
-        console.log(`Hello, my name is ${this.name}`);
-    }
-}
+  name: 'Zeyad',
+  greet () {
+    console.log(`Hello, my name is ${this.name}`);
+  }
+};
 
-myObject.greet()
+myObject.greet();
