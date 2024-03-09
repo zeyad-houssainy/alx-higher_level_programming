@@ -1,8 +1,3 @@
-const fs = require('fs');
-fs.readFile('test.txt', 'utf-8', (err, data) => {
-  if (err) {
-    console.error('Error ready the file');
-    return;
-  }
-  console.log(data);
-});
+const request = require("request");
+const baseUrl = "https://swapi-api.alx-tools.com/api/films/";
+userId = 18;
