@@ -1,20 +1,18 @@
-#!/usr/bin/node
-// uses Star Wars API to display amount of films featuring Wedge Antilles
 const request = require("request");
+const baseUrl = "https://swapi-api.alx-tools.com/api/films/";
+const userId = 18;
 
-request(process.argv[2], function (error, response, body) {
+const temp = 0;
+request(`${baseUrl}`, (error, _response, body) => {
   if (error) {
     console.error(error);
   }
   const films = JSON.parse(body).results;
-  const wedgeId = 18;
-  let count = 0;
-  for (const film of films) {
-    for (const url of film.characters) {
-      if (url.includes(`/api/people/${wedgeId}/`)) {
-        count += 1;
+  for (let film of films) {
+    for (let url of film.characters) {
+      if (url.includes(`/api/people/${userId}/`)) {
+        console.log("OK");
       }
     }
   }
-  console.log(count);
 });
