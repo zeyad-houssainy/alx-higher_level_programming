@@ -10,7 +10,7 @@ $("footer").css({ "background-color": "black", color: "white" });
 // add a new paragraph to the div
 document.addEventListener("DOMContentLoaded", function () {
   const divElement = document.querySelector("div");
-  const newParagraph = document.createElement("p");
+  const newParagraph = documaent.createElement("p");
   newParagraph.textContent = "This is a new paragraph";
   divElement.appendChild(newParagraph);
   $("div").css("background-color", "red");
